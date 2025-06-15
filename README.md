@@ -9,8 +9,6 @@ Creating a language dictionary for `pynum2words` python library very easy. all y
 ```text
 # English Language Dictionary
 
-
-```
 0 = Zero
 1 = One
 2 = Two
@@ -43,6 +41,7 @@ Creating a language dictionary for `pynum2words` python library very easy. all y
 1000 = Thousand
 1000000 = Million
 1000000000 = Billion
+```
 
 ```pynum2words``` Library also supports comments in the dictionary file, so you can add comments to explain the numbers or any other information you want like this.
 
@@ -66,7 +65,7 @@ Creating a language dictionary for `pynum2words` python library very easy. all y
 Supported Comments ``#, //, /* */``
 ```
 
-The pynum2words library ```dictionary loader``` will also show errors & warnings if there are any issues with the dictionary file. For example, if you define a number that is not a multiple of 10, it will show a warning like this:
+The pynum2words library ```dictionary loader``` will also show errors & warnings if there are any issues with the dictionary file. For example, if you define a have a syntax error, it will show a warning like this:
 
 ```text
 0 = Zero
