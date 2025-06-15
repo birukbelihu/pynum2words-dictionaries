@@ -65,7 +65,7 @@ Creating a language dictionary for `pynum2words` python library very easy. all y
 Supported Comments ``#, //, /* */``
 ```
 
-The pynum2words library ```dictionary loader``` will also show errors & warnings if there are any issues with the dictionary file. For example, if you define a have a syntax error, it will show a warning like this:
+The ```pynum2words``` library will also show errors & warnings if there are any issues with the dictionary file. For example, if you define a have a syntax error, it will show a warning like this:
 
 ```text
 0 = Zero
