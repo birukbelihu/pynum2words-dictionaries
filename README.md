@@ -1,6 +1,6 @@
 # pynum2words-language-packs
 
-Language Packs For [pynum2words](https://pypi.org/project/pynum2words/1.1.7/) Python Library
+Language Packs For [pynum2words](https://github.com/BirukBelihu/pynum2words) Python Library
 
 # How To Create A Language Dictionary
 
@@ -64,7 +64,7 @@ Creating a language dictionary for `pynum2words` python library very easy. all y
 Supported Comments ``#, //, /* */``
 ```
 
-The ```pynum2words``` library will also show errors & warnings if there are any issues with the dictionary file. For example, if you definition have a syntax error, it will show a warning like this:
+The ```pynum2words``` library will also show errors & warnings if there are any issues with the dictionary file. For example, if your definition have a syntax error, it will show a warning like this:
 
 ```text
 0 = Zero
