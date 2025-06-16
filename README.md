@@ -47,25 +47,24 @@ Creating a language dictionary for `pynum2words` python library very easy. all y
 
 ```text
 
-# Here I define the basic numbers in English language from 1 to 10
-0 = Zero
-1 = One
-2 = Two
-3 = Three
-4 = Four
-5 = Five
-6 = Six
-7 = Seven
-8 = Eight
-9 = Nine
-10 = Ten
+# Here I define the basic numbers in Amharic language from 1 to 10
+1 = አንድ
+2 = ሁለት
+3 = ሶስት
+4 = አራት
+5 = አምስት
+6 = ስድስት
+7 = ሰባት
+8 = ስምንት
+9 = ዘጠኝ
+10 = አስር
 ```
 
 ```text
 Supported Comments ``#, //, /* */``
 ```
 
-The ```pynum2words``` library will also show errors & warnings if there are any issues with the dictionary file. For example, if you define a have a syntax error, it will show a warning like this:
+The ```pynum2words``` library will also show errors & warnings if there are any issues with the dictionary file. For example, if you definition have a syntax error, it will show a warning like this:
 
 ```text
 0 = Zero
