@@ -97,7 +97,7 @@ print(amharic.words_to_number("ሁለት ሺህ አምስት"))  # Output: 2005
 # How To Contribute
 If you want to contribute a language dictionary, you can create a pull request with your language dictionary file. Make sure to follow the format mentioned above and test it with the `pyn2wc` tool before submitting the pull request.
 
-You can download pyn2wc tool from the [pynum2words-language-packs](releases/latest) releases page for your operating system. currently prebuilt binaries are available only for Windows & Linux. If you want to build it from source, you can follow this simple steps:
+You can download pyn2wc tool from the [pynum2words-language-packs](https://github.com/birukbelihu/pynum2words-language-packs/releases) releases page for your operating system. currently prebuilt binaries are available only for Windows & Linux. If you want to build it from source, you can follow this simple steps:
 1. Clone the repository
 ```bash
 git clone https://github.com/birukbelihu/pynum2words-language-packs
