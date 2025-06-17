@@ -4,7 +4,7 @@ Language Packs For [pynum2words](https://github.com/BirukBelihu/pynum2words) Pyt
 
 # How To Create A Language Dictionary
 
-Creating a language dictionary for `pynum2words` python library very easy. all you need to do is to create a dedicated text file with .n2w extension and define the basic number that subsequent numbers will be derived from it. here is an example of a language dictionary for the English language:
+Creating a language dictionary for `pynum2words` python library is very easy. all you need to do is to create a dedicated text file with .n2w extension and define the basic number that subsequent numbers will be derived from it. here is an example of a language dictionary for the English language:
 
 ```text
 # English Language Dictionary
@@ -47,7 +47,8 @@ Creating a language dictionary for `pynum2words` python library very easy. all y
 
 ```text
 
-# Here I define the basic numbers in Amharic language from 1 to 10
+# Here I define the basic numbers in Amharic language from 0 to 10
+0 = ዜሮ
 1 = አንድ
 2 = ሁለት
 3 = ሶስት
@@ -76,7 +77,22 @@ The ```pynum2words``` library will also show errors & warnings if there are any 
 ```text
 Line 2 Invalid Format: 1One — expected 'number = word'
 ```
+# How To Use The Language Dictionary
 
+To use the language dictionary you created, you need to save it with a `.n2w` extension and place it in the current or any other directory you want(Note that you should use the absolute path if it's in another folder). After that, you can use it in your Python code like this:
 
+```python
+from pynum2words.builtin_dictionaries import amharic_dictionary, english_dictionary
+from pynum2words.pynum2words import PyNum2Words
 
-Consider Supporting pynum2words Library By Providing A Language Dictionary For Your Language.
+amharic = PyNum2Words("amharic.n2w")
+
+# Number to words
+
+print(amharic.number_to_words(1995))  # Output: አንድ ሺህ ዘጠኝ መቶ ዘጠና አምስት
+# Words to number
+
+print(amharic.words_to_number("ሁለት ሺህ አምስት"))  # Output: 2005
+```
+# How To Contribute
+If you want to contribute a language dictionary, you can create a pull request with your language dictionary file. Make sure to follow the format mentioned above and test it with the `pynum2words` library before submitting the pull request.
