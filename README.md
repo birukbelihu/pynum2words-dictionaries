@@ -81,7 +81,7 @@ Line 2 Invalid Format: 1One — expected 'number = word'
 
 To use the language dictionary you created, you need to save it with a `.n2w` extension and place it in the current or any other directory you want(Note that you should use the absolute path if it's in another folder). After that, you can use it in your Python code like this:
 
-```python
+```
 from pynum2words.builtin_dictionaries import amharic_dictionary, english_dictionary
 from pynum2words.pynum2words import PyNum2Words
 

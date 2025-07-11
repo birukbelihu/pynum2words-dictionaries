@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/pynum2words-language-packs.iml" filepath="$PROJECT_DIR$/.idea/pynum2words-language-packs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/pynum2words-dictionaries.iml" filepath="$PROJECT_DIR$/.idea/pynum2words-dictionaries.iml" />
     </modules>
   </component>
 </project>
