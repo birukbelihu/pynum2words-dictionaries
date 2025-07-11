@@ -1,6 +1,6 @@
-# pynum2words-language-packs
+# pynum2words-dictionaries
 
-Language Packs For [pynum2words](https://github.com/BirukBelihu/pynum2words) Python Library
+Language Dictionaries For [pynum2words](https://github.com/BirukBelihu/pynum2words) Python Library
 
 # How To Create A Language Dictionary
 
