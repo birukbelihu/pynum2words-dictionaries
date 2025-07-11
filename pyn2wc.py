@@ -1,5 +1,8 @@
 import os
 import sys
+from colorama import init, Fore
+
+init(autoreset=True)
 
 def load_num2words_dictionary(dictionary_file_path: str):
     number_to_word = {}
@@ -15,7 +18,7 @@ def load_num2words_dictionary(dictionary_file_path: str):
                     continue
 
                 if '=' not in line:
-                    warnings.append(f"[Line {i}] Invalid format: '{line}' — expected 'number = word'")
+                    warnings.append(f"Invalid format at line {i}: '{line}' — expected 'number = word'")
                     continue
 
                 key, value = line.split('=', 1)
@@ -24,24 +27,24 @@ def load_num2words_dictionary(dictionary_file_path: str):
 
                 if not key.isdigit() or not value:
                     errors.append(
-                        f"[Line {i}] Invalid entry: '{line}' — left side must be a number and right side non-empty"
+                        f"Invalid entry at line {i}: '{line}' — left side must be a number and right side non-empty"
                     )
                     continue
 
                 number_to_word[int(key)] = value
-    except Exception as e:
-        print(f"Error reading dictionary file: {e}")
+    except Exception as exception:
+        print(Fore.RED + f"Unable to read the dictionary file due to: {exception}")
         return None, None, False
 
     if errors or warnings:
         if errors:
             print("Errors:")
-            for err in errors:
-                print(err)
+            for error in errors:
+                print(Fore.RED + error)
         if warnings:
             print("Warnings:")
-            for warn in warnings:
-                print(warn)
+            for warning in warnings:
+                print(Fore.YELLOW + warning)
         return number_to_word, {}, False
 
     number_to_word = dict(sorted(number_to_word.items(), reverse=True))
@@ -54,7 +57,7 @@ def is_valid_n2w_file(file_path):
 
 def main():
     if len(sys.argv) != 2:
-        print("Usage: pyn2wc <path_to_n2w_file>")
+        print(Fore.BLUE + "Usage: pyn2wc <path_to_n2w_file>")
         sys.exit(1)
 
     file_path = sys.argv[1]
@@ -62,13 +65,13 @@ def main():
         if is_valid_n2w_file(file_path):
             number_to_word, word_to_number, valid = load_num2words_dictionary(file_path)
             if valid:
-                print(f"{os.path.basename(file_path)} passed the checks.")
-                print(f"{os.path.basename(file_path)} Is Ready To Use.")
+                print(Fore.GREEN + f"{os.path.basename(file_path)} passed the checks.")
+                print(Fore.GREEN + f"{os.path.basename(file_path)} Is Ready To Use.")
         else:
-            print(f"File '{file_path}' failed the checks. Ensure it exists, is a file, and has a .n2w extension.")
+            print(Fore.RED + f"File '{file_path}' failed the checks. Ensure it exists, is a file, and has a .n2w extension.")
             sys.exit(1)
     except Exception as e:
-        print(f"Error checking file '{file_path}': {e}")
+        print(Fore.RED + f"Error checking file '{file_path}': {e}")
         sys.exit(1)
 
 if __name__ == "__main__":

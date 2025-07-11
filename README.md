@@ -47,7 +47,7 @@ Creating a language dictionary for `pynum2words` python library is very easy. al
 
 ```text
 
-# Here I define the basic numbers in Amharic language from 0 to 10
+# Here is Amharic language dictionary for pynum2words from 0 to 10
 0 = ዜሮ
 1 = አንድ
 2 = ሁለት

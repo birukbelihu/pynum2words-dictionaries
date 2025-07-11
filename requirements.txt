@@ -1,1 +1,2 @@
 pyinstaller~=6.14.1
+colorama~=0.4.6
