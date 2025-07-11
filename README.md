@@ -4,7 +4,7 @@ Language Dictionaries For [pynum2words](https://github.com/BirukBelihu/pynum2wor
 
 # How To Create a Language Dictionary
 
-Creating a language dictionary for `pynum2words` python library is very easy. All you need to do is to create a dedicated text file with .n2w extension and define the basic number that subsequent numbers will be derived from it. here is an example of a language dictionary for the English language:
+Creating a language dictionary for `pynum2words` python library is very easy. All you have to do is to create a dedicated text file with .n2w extension and define the basic number that subsequent numbers will be derived from it. here is an example of a language dictionary for the English language:
 
 ```text
 # English Language Dictionary
