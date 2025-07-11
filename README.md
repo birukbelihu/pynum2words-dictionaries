@@ -2,9 +2,9 @@
 
 Language Dictionaries For [pynum2words](https://github.com/BirukBelihu/pynum2words) Python Library
 
-# How To Create A Language Dictionary
+# How To Create a Language Dictionary
 
-Creating a language dictionary for `pynum2words` python library is very easy. all you need to do is to create a dedicated text file with .n2w extension and define the basic number that subsequent numbers will be derived from it. here is an example of a language dictionary for the English language:
+Creating a language dictionary for `pynum2words` python library is very easy. All you need to do is to create a dedicated text file with .n2w extension and define the basic number that subsequent numbers will be derived from it. here is an example of a language dictionary for the English language:
 
 ```text
 # English Language Dictionary
@@ -77,6 +77,9 @@ The ```pynum2words``` library will also show errors & warnings if there are any 
 ```text
 Line 2 Invalid Format: 1One — expected 'number = word'
 ```
+
+Once you've done creating your language dictionary, you can test it using the `pyn2wc` tool by downloading it from the [releases](https://github.com/birukbelihu/pynum2words-dictionaries/releases) page. This tool will help you to check if your dictionary is valid and can be used with the `pynum2words` library.
+
 # How To Use The Language Dictionary
 
 To use the language dictionary you created, you need to save it with a `.n2w` extension and place it in the current or any other directory you want(Note that you should use the absolute path if it's in another folder). After that, you can use it in your Python code like this:
@@ -95,9 +98,9 @@ print(amharic.number_to_words(1995))  # Output: አንድ ሺህ ዘጠኝ መ�
 print(amharic.words_to_number("ሁለት ሺህ አምስት"))  # Output: 2005
 ```
 # How To Contribute
-If you want to contribute a language dictionary, you can create a pull request with your language dictionary file. Make sure to follow the format mentioned above and test it with the `pyn2wc` tool before submitting the pull request.
+First thank you so much for your contribution. To contribute a language dictionary, you can create a pull request with your language dictionary file. Make sure to follow the format mentioned above and test it with the `pyn2wc` tool before submitting the pull request.
 
-You can download pyn2wc tool from the [pynum2words-language-packs](https://github.com/birukbelihu/pynum2words-language-packs/releases) releases page for your operating system. currently prebuilt binaries are available only for Windows & Linux. If you want to build it from source, you can follow this simple steps:
+You can download pyn2wc tool from the [releases](https://github.com/birukbelihu/pynum2words-dictionaries/releases) page for your operating system. currently prebuilt binaries are available only for Windows & Linux. If you want to build it from source, you can follow this simple steps:
 1. Clone the repository
 ```bash
 git clone https://github.com/birukbelihu/pynum2words-language-packs
