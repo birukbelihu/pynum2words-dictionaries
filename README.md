@@ -75,7 +75,7 @@ The ```pynum2words``` library will also show errors & warnings if there are any 
 ```
 
 ```text
-Line 2 Invalid Format: 1One — expected 'number = word'
+Invalid format at line 2: '1One' — expected 'number = word'
 ```
 
 Once you've done creating your language dictionary, you can test it using the `pyn2wc` tool by downloading it from the [releases](https://github.com/birukbelihu/pynum2words-dictionaries/releases) page. This tool will help you to check if your dictionary is valid and can be used with the `pynum2words` library.
@@ -84,8 +84,7 @@ Once you've done creating your language dictionary, you can test it using the `p
 
 To use the language dictionary you created, you need to save it with a `.n2w` extension and place it in the current or any other directory you want(Note that you should use the absolute path if it's in another folder). After that, you can use it in your Python code like this:
 
-```
-from pynum2words.builtin_dictionaries import amharic_dictionary, english_dictionary
+```python
 from pynum2words.pynum2words import PyNum2Words
 
 amharic = PyNum2Words("amharic.n2w")
@@ -98,7 +97,7 @@ print(amharic.number_to_words(1995))  # Output: አንድ ሺህ ዘጠኝ መ�
 print(amharic.words_to_number("ሁለት ሺህ አምስት"))  # Output: 2005
 ```
 # How To Contribute
-First thank you so much for your contribution. To contribute a language dictionary, you can create a pull request with your language dictionary file. Make sure to follow the format mentioned above and test it with the `pyn2wc` tool before submitting the pull request.
+First of all thank you so much for your contribution. To contribute a language dictionary, you can create a pull request with your language dictionary file. Make sure to follow the format mentioned above and test it with the `pyn2wc` tool before submitting the pull request.
 
 You can download pyn2wc tool from the [releases](https://github.com/birukbelihu/pynum2words-dictionaries/releases) page for your operating system. currently prebuilt binaries are available only for Windows & Linux. If you want to build it from source, you can follow this simple steps:
 1. Clone the repository
