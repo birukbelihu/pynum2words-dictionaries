@@ -105,7 +105,7 @@ You can download pyn2wc tool from the [releases](https://github.com/birukbelihu/
 git clone https://github.com/birukbelihu/pynum2words-dictionaries
 ```
 
-2. Navigate to the cloned directory
+2. Navigate to the project directory
 ```bash
 cd pynum2words-dictionaries
 ```
