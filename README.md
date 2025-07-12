@@ -87,14 +87,14 @@ To use the language dictionary you created, you need to save it with a `.n2w` ex
 ```python
 from pynum2words.pynum2words import PyNum2Words
 
-amharic = PyNum2Words("amharic.n2w")
+amharic_converter = PyNum2Words("amharic.n2w")
 
 # Number to words
 
-print(amharic.number_to_words(1995))  # Output: አንድ ሺህ ዘጠኝ መቶ ዘጠና አምስት
+print(amharic_converter.number_to_words(1995))  # Output: አንድ ሺህ ዘጠኝ መቶ ዘጠና አምስት
 # Words to number
 
-print(amharic.words_to_number("ሁለት ሺህ አምስት"))  # Output: 2005
+print(amharic_converter.words_to_number("ሁለት ሺህ አምስት"))  # Output: 2005
 ```
 # How To Contribute
 First of all thank you so much for your contribution. To contribute a language dictionary, you can create a pull request with your language dictionary file. Make sure to follow the format mentioned above and test it with the `pyn2wc` tool before submitting the pull request.
@@ -102,12 +102,12 @@ First of all thank you so much for your contribution. To contribute a language d
 You can download pyn2wc tool from the [releases](https://github.com/birukbelihu/pynum2words-dictionaries/releases) page for your operating system. currently prebuilt binaries are available only for Windows & Linux. If you want to build it from source, you can follow this simple steps:
 1. Clone the repository
 ```bash
-git clone https://github.com/birukbelihu/pynum2words-language-packs
+git clone https://github.com/birukbelihu/pynum2words-dictionaries
 ```
 
 2. Navigate to the cloned directory
 ```bash
-cd pynum2words-language-packs
+cd pynum2words-dictionaries
 ```
 
 3. Install the required dependencies
@@ -116,6 +116,6 @@ pip install -r requirements.txt
 ```
 
 4. Build the tool using PyInstaller
-```
+```bash
 pyinstaller --onefile pyn2wc.py
 ```
