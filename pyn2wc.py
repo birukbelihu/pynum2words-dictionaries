@@ -4,7 +4,7 @@ from colorama import init, Fore
 
 init(autoreset=True)
 
-def load_num2words_dictionary(dictionary_file_path: str):
+def load_pynum2words_dictionary(dictionary_file_path: str):
     number_to_word = {}
     comments = ['#', '//', '/*', '*/', ';']
     errors = []
@@ -63,15 +63,15 @@ def main():
     file_path = sys.argv[1]
     try:
         if is_valid_n2w_file(file_path):
-            number_to_word, word_to_number, valid = load_num2words_dictionary(file_path)
+            number_to_word, word_to_number, valid = load_pynum2words_dictionary(file_path)
             if valid:
                 print(Fore.GREEN + f"{os.path.basename(file_path)} passed the checks.")
-                print(Fore.GREEN + f"{os.path.basename(file_path)} Is Ready To Use.")
+                print(Fore.GREEN + f"{os.path.basename(file_path)} Is ready to use.")
         else:
             print(Fore.RED + f"File '{file_path}' failed the checks. Ensure it exists, is a file, and has a .n2w extension.")
             sys.exit(1)
     except Exception as e:
-        print(Fore.RED + f"Error checking file '{file_path}': {e}")
+        print(Fore.RED + f"Unable to check dictionary file '{file_path}': due to{e}")
         sys.exit(1)
 
 if __name__ == "__main__":

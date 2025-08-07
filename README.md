@@ -78,7 +78,7 @@ The ```pynum2words``` library will also show errors & warnings if there are any 
 Invalid format at line 2: '1One' — expected 'number = word'
 ```
 
-Once you've done creating your language dictionary, you can test it using the `pyn2wc` tool by downloading it from the [releases](https://github.com/birukbelihu/pynum2words-dictionaries/releases) page. This tool will help you to check if your dictionary is valid and can be used with the `pynum2words` library.
+Once you've done creating your language dictionary, you can test it using the `pyn2wc` script. This script will help you to check if your dictionary is valid and can be used with the `pynum2words` library.
 
 # How To Use The Language Dictionary
 
@@ -99,7 +99,6 @@ print(amharic_converter.words_to_number("ሁለት ሺህ አምስት"))  # Out
 # How To Contribute
 First of all thank you so much for your contribution. To contribute a language dictionary, you can create a pull request with your language dictionary file. Make sure to follow the format mentioned above and test it with the `pyn2wc` tool before submitting the pull request.
 
-You can download pyn2wc tool from the [releases](https://github.com/birukbelihu/pynum2words-dictionaries/releases) page for your operating system. currently prebuilt binaries are available only for Windows & Linux. If you want to build it from source, you can follow this simple steps:
 1. Clone the repository
 ```bash
 git clone https://github.com/birukbelihu/pynum2words-dictionaries
@@ -115,7 +114,7 @@ cd pynum2words-dictionaries
 pip install -r requirements.txt
 ```
 
-4. Build the tool using PyInstaller
+4. Run the `pyn2wc` script to with your dictionary path or name(If it's in the current directory)
 ```bash
-pyinstaller --onefile pyn2wc.py
+python pyn2wc.py dummy.n2w
 ```
