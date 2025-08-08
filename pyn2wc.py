@@ -38,11 +38,11 @@ def load_pynum2words_dictionary(dictionary_file_path: str):
 
     if errors or warnings:
         if errors:
-            print("Errors:")
+            print(f"{len(errors)} Error(s) Found:")
             for error in errors:
                 print(Fore.RED + error)
         if warnings:
-            print("Warnings:")
+            print(f"{len(warnings)} Warning(s) Found:")
             for warning in warnings:
                 print(Fore.YELLOW + warning)
         return number_to_word, {}, False
@@ -57,7 +57,7 @@ def is_valid_n2w_file(file_path):
 
 def main():
     if len(sys.argv) != 2:
-        print(Fore.BLUE + "Usage: pyn2wc <path_to_n2w_file>")
+        print(Fore.BLUE + "Usage: python pyn2wc.py <path_to_n2w_file>")
         sys.exit(1)
 
     file_path = sys.argv[1]
