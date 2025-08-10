@@ -118,3 +118,18 @@ pip install -r requirements.txt
 ```bash
 python pyn2wc.py dummy.n2w
 ```
+
+or the folder containing the dictionary files
+```bash
+python pyn2wc.py dictionaries/
+```
+
+## 📢 Social Media
+
+- 📺 [YouTube: @pythondevs](https://youtube.com/@pythondevs?si=_CZxaEBwDkQEj4je)
+
+---
+
+## 📄 License
+
+This project is licensed under the **Apache License 2.0**. See the [LICENSE](LICENSE) file for details.
